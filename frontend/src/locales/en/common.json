@@ -1,0 +1,58 @@
+{
+  "buttons": {
+    "enterPin": "Enter PIN",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "confirm": "Confirm",
+    "balance": "Balance",
+    "withdraw": "Withdraw",
+    "deposit": "Deposit",
+    "exit": "Exit",
+    "reEnterPin": "Re-Enter PIN",
+    "mainMenu": "Main Menu"
+  },
+  "screens": {
+    "welcome": "Welcome to the ATM",
+    "enterYourPin": "Enter your PIN:",
+    "authenticating": "Authenticating...",
+    "currentBalance": "Current Account Balance:",
+    "selectWithdrawAmount": "Select Withdraw Amount:",
+    "selectDepositAmount": "Select Deposit Amount:",
+    "loadingBalance": "Loading Balance...",
+    "processing": "Processing..."
+  },
+  "messages": {
+    "invalidPin": "Invalid PIN. Please try again.",
+    "insufficientFunds": "Insufficient funds",
+    "transactionComplete": "Transaction completed",
+    "networkError": "Network error"
+  },
+  "account": {
+    "account": "Account"
+  },
+  "demo": {
+    "demoPins": "Demo PINs: 1234, 5678, 9999"
+  },
+  "languages": {
+    "english": "EN",
+    "spanish": "ES",
+    "languageToggle": "ES"
+  },
+  "amounts": {
+    "20": "$20",
+    "40": "$40",
+    "60": "$60",
+    "80": "$80",
+    "100": "$100",
+    "200": "$200"
+  },
+  "branding": {
+    "atm": "ATM",
+    "tagline": "24 HOUR BANKING"
+  },
+  "ui": {
+    "loading": "Loading...",
+    "cardType": "Card Type:",
+    "welcome": "Welcome, {{name}}!"
+  }
+}

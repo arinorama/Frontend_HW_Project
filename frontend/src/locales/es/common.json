@@ -1,0 +1,58 @@
+{
+  "buttons": {
+    "enterPin": "Ingresar PIN",
+    "cancel": "Cancelar",
+    "clear": "Limpiar",
+    "confirm": "Confirmar",
+    "balance": "Saldo",
+    "withdraw": "Retirar",
+    "deposit": "Depositar",
+    "exit": "Salir",
+    "reEnterPin": "Reingresar PIN",
+    "mainMenu": "Menú Principal"
+  },
+  "screens": {
+    "welcome": "Bienvenido al ATM",
+    "enterYourPin": "Ingrese su PIN:",
+    "authenticating": "Autenticando...",
+    "currentBalance": "Saldo Actual de la Cuenta:",
+    "selectWithdrawAmount": "Seleccione Monto a Retirar:",
+    "selectDepositAmount": "Seleccione Monto a Depositar:",
+    "loadingBalance": "Cargando Saldo...",
+    "processing": "Procesando..."
+  },
+  "messages": {
+    "invalidPin": "PIN inválido. Por favor intente nuevamente.",
+    "insufficientFunds": "Fondos insuficientes",
+    "transactionComplete": "Transacción completada",
+    "networkError": "Error de red"
+  },
+  "account": {
+    "account": "Cuenta"
+  },
+  "demo": {
+    "demoPins": "PINs de Demo: 1234, 5678, 9999"
+  },
+  "languages": {
+    "english": "EN",
+    "spanish": "ES",
+    "languageToggle": "EN"
+  },
+  "amounts": {
+    "20": "$20",
+    "40": "$40",
+    "60": "$60",
+    "80": "$80",
+    "100": "$100",
+    "200": "$200"
+  },
+  "branding": {
+    "atm": "ATM",
+    "tagline": "SERVICIO 24 HORAS"
+  },
+  "ui": {
+    "loading": "Cargando...",
+    "cardType": "Tipo de Tarjeta:",
+    "welcome": "Bienvenido, {{name}}!"
+  }
+}

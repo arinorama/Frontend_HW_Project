@@ -136,6 +136,40 @@ Frontend_HW_Project/
    ```
    The frontend will start on http://localhost:5173
 
+## Linting and Code Quality
+
+### Frontend Linting
+
+Run ESLint to check for code quality issues:
+
+```bash
+cd frontend
+npm run lint
+```
+
+Automatically fix linting issues where possible:
+
+```bash
+cd frontend
+npm run lint:fix
+```
+
+### Backend Linting
+
+Run ESLint to check for code quality issues:
+
+```bash
+cd backend
+npm run lint
+```
+
+Automatically fix linting issues where possible:
+
+```bash
+cd backend
+npm run lint:fix
+```
+
 ### Production Build
 
 1. **Build the Backend**
@@ -190,9 +224,11 @@ The application uses Redux Toolkit with the following slices:
 
 ### Code Quality
 
-- ESLint configuration for code quality
-- TypeScript for type safety
+- ESLint configuration for both frontend and backend
+- TypeScript for type safety and better development experience
+- Automatic code fixing with `lint:fix` commands
 - Modular component architecture
+- Consistent code formatting and best practices
 
 ### Performance Optimization
 

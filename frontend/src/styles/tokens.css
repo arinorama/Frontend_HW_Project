@@ -1,0 +1,232 @@
+/* ==========================================================================
+   ATM DESIGN TOKENS
+   Central design system for consistent theming
+   ========================================================================== */
+
+:root {
+  /* Layout Height System */
+  --height-viewport-top-space: 5vh;
+  --height-viewport-bottom-space: 0rem;
+  
+  /* Fluid Horizontal Spacing */
+  --spacing-horizontal: clamp(0rem, calc((100vw - 768px) * 0.1), 25vw);
+  
+  /* ==========================================================================
+     SCALING SYSTEM
+     ========================================================================== */
+  
+  /* Fluid scaling system - Viewport-based */
+  --scale-viewport-ratio: 0.5;
+  --scale-min-size: 20vw;
+  --scale-max-size: 90vw;
+  --scale-base: clamp(var(--scale-min-size), calc(100vw * var(--scale-viewport-ratio)), var(--scale-max-size));
+  --scale-min-factor: 0.5;
+  --scale-max-factor: 1.5;
+  
+  /* Calculated base boundaries */
+  --base-machine-min: calc(var(--scale-base) * var(--scale-min-factor));
+  --base-machine-max: calc(var(--scale-base) * var(--scale-max-factor));
+  
+  /* Component ratios */
+  --ratio-brand-width: 1.125;
+  --ratio-brand-height: 0.261;
+  --ratio-font-brand-main: 0.12;
+  --ratio-font-brand-sub: 0.0375;
+  --ratio-spacing-large: 0.06;
+  --ratio-spacing-medium: 0.03;
+  --ratio-spacing-small: 0.015;
+  --ratio-button-width: 0.08;
+  --ratio-button-height: 0.06;
+  --ratio-button-font: 0.03;
+  --ratio-button-padding: 0.0125;
+  --ratio-grid-height: 0.48;
+  --ratio-screen-min-height: 0.375;
+
+  /* ==========================================================================
+     COLORS
+     ========================================================================== */
+  
+  /* ATM Primary Colors */
+  --color-atm-primary: #126CAE;
+  --color-atm-screen-bg: #7EB4D5;
+  --color-surface: #F5F5F5;
+  --color-button: #E8E8E8;
+  
+  /* ATM Button States */
+  --color-atm-success: #059669;
+  --color-atm-success-border: #34d399;
+  --color-atm-danger: #dc2626;
+  --color-atm-neutral: rgba(255, 255, 255, 0.2);
+  --color-atm-neutral-border: rgba(255, 255, 255, 0.3);
+  --color-atm-error-text: #fca5a5;
+  --color-atm-info-bg: #dbeafe;
+  --color-atm-info-text: #374151;
+  --color-atm-action: #2563eb;
+  
+  /* Semantic Colors */
+  --color-success: #28a745;
+  --color-error: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  
+  /* Essential Grays */
+  --color-gray-100: #f3f4f6;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  
+  /* Text Colors */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-white: #ffffff;
+  --color-text-muted: var(--color-gray-500);
+  
+  /* ==========================================================================
+     SPACING & SIZING
+     ========================================================================== */
+  
+  /* ATM Machine Dimensions */
+  --size-atm-machine: clamp(
+    var(--base-machine-min),
+    var(--scale-base),
+    var(--base-machine-max)
+  );
+  
+  --size-atm-brand: clamp(
+    calc(var(--base-machine-min) * var(--ratio-brand-width)),
+    calc(var(--scale-base) * var(--ratio-brand-width)),
+    calc(var(--base-machine-max) * var(--ratio-brand-width))
+  );
+  
+  --size-atm-brand-height: clamp(
+    calc(var(--base-machine-min) * var(--ratio-brand-height)),
+    calc(var(--scale-base) * var(--ratio-brand-height)),
+    calc(var(--base-machine-max) * var(--ratio-brand-height))
+  );
+  
+  /* Spacing Scale */
+  --spacing-xs: clamp(0.125rem, 0.5vw, 0.375rem);
+  --spacing-sm: clamp(0.25rem, 1vw, 0.75rem);
+  --spacing-md: clamp(
+    calc(var(--base-machine-min) * var(--ratio-spacing-small)),
+    calc(var(--scale-base) * var(--ratio-spacing-small)),
+    calc(var(--base-machine-max) * var(--ratio-spacing-small))
+  );
+  --spacing-lg: clamp(
+    calc(var(--base-machine-min) * var(--ratio-spacing-medium)),
+    calc(var(--scale-base) * var(--ratio-spacing-medium)),
+    calc(var(--base-machine-max) * var(--ratio-spacing-medium))
+  );
+  --spacing-xl: clamp(1rem, 4vw, 3rem);
+  --spacing-2xl: clamp(
+    calc(var(--base-machine-min) * var(--ratio-spacing-large)),
+    calc(var(--scale-base) * var(--ratio-spacing-large)),
+    calc(var(--base-machine-max) * var(--ratio-spacing-large))
+  );
+  --spacing-3xl: clamp(2rem, 8vw, 6rem);
+  
+  /* Border Radius */
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-2xl: 1rem;
+  
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+  
+  /* Font Families */
+  --font-primary: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --font-serif: 'Times New Roman', Times, serif;
+  
+  /* Font Weights */
+  --font-weight-semibold: 600;
+  
+  /* Font Sizes */
+  --font-size-xs: clamp(0.625rem, 1.5vw, 0.875rem);
+  --font-size-sm: clamp(0.75rem, 1.75vw, 1rem);
+  --font-size-base: clamp(0.875rem, 2vw, 1.125rem);
+  --font-size-lg: clamp(1rem, 2.25vw, 1.25rem);
+  --font-size-xl: clamp(1.125rem, 2.5vw, 1.5rem);
+  --font-size-2xl: clamp(1.25rem, 3vw, 1.875rem);
+  --font-size-3xl: clamp(
+    calc(var(--base-machine-min) * var(--ratio-font-brand-sub)),
+    calc(var(--scale-base) * var(--ratio-font-brand-sub)),
+    calc(var(--base-machine-max) * var(--ratio-font-brand-sub))
+  );
+  --font-size-4xl: clamp(1.5rem, 4vw, 2.5rem);
+  --font-size-5xl: clamp(2.25rem, 6vw, 3.75rem);
+  --font-size-6xl: clamp(2.5rem, 7vw, 4.5rem);
+  --font-size-7xl: clamp(3.25rem, 9vw, 5.5rem);
+  --font-size-8xl: clamp(
+    calc(var(--base-machine-min) * var(--ratio-font-brand-main)),
+    calc(var(--scale-base) * var(--ratio-font-brand-main)),
+    calc(var(--base-machine-max) * var(--ratio-font-brand-main))
+  );
+  
+  /* ==========================================================================
+     SHADOWS & EFFECTS
+     ========================================================================== */
+  
+  /* Box Shadows */
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Text Shadows */
+  --text-shadow-sm: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  /* ==========================================================================
+     ATM SPECIFIC TOKENS
+     ========================================================================== */
+  
+  /* ATM Button States */
+  --color-button-hover: #d0d0d0;
+  --color-button-active: #c0c0c0;
+  --color-button-disabled: rgba(232, 232, 232, 0.5);
+  
+  /* ATM Button Dimensions */
+  --button-width: clamp(
+    calc(var(--base-machine-min) * var(--ratio-button-width)),
+    calc(var(--scale-base) * var(--ratio-button-width)),
+    calc(var(--base-machine-max) * var(--ratio-button-width))
+  );
+  
+  --button-height: clamp(
+    calc(var(--base-machine-min) * var(--ratio-button-height)),
+    calc(var(--scale-base) * var(--ratio-button-height)),
+    calc(var(--base-machine-max) * var(--ratio-button-height))
+  );
+  
+  --button-font-size: clamp(
+    calc(var(--base-machine-min) * var(--ratio-button-font)),
+    calc(var(--scale-base) * var(--ratio-button-font)),
+    calc(var(--base-machine-max) * var(--ratio-button-font))
+  );
+  
+  --button-padding: clamp(
+    calc(var(--base-machine-min) * var(--ratio-button-padding)),
+    calc(var(--scale-base) * var(--ratio-button-padding)),
+    calc(var(--base-machine-max) * var(--ratio-button-padding))
+  );
+  
+  --grid-height: clamp(
+    calc(var(--base-machine-min) * var(--ratio-grid-height)),
+    calc(var(--scale-base) * var(--ratio-grid-height)),
+    calc(var(--base-machine-max) * var(--ratio-grid-height))
+  );
+  
+  --screen-min-height: clamp(
+    calc(var(--base-machine-min) * var(--ratio-screen-min-height)),
+    calc(var(--scale-base) * var(--ratio-screen-min-height)),
+    calc(var(--base-machine-max) * var(--ratio-screen-min-height))
+  );
+  
+  /* ATM Background & Gradients */
+  --color-atm-background: #9f80ac;
+  --gradient-machine: linear-gradient(to bottom, #e5e7eb, #d1d5db);
+}
