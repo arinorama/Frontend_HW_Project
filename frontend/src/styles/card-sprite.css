@@ -1,14 +1,14 @@
 /* Card Sprite Styles */
 .card-sprite {
-  width: 48px; /* Kırpılmaları tamamen önlemek için daha geniş */
+  width: 48px;
   height: 32px;
   background-image: url('/creditcard_sprite.png');
   background-repeat: no-repeat;
-  background-size: 290px auto; /* Biraz daha geniş ayarladım */
+  background-size: 290px auto;
   transition: opacity 0.3s ease;
   display: inline-block;
-  overflow: hidden; /* Taşan kısımları gizle */
-  background-clip: padding-box; /* Daha temiz kesim için */
+  overflow: hidden;
+  background-clip: padding-box; 
 }
 
 .card-sprite--star { 
@@ -46,26 +46,15 @@
   opacity: 1; 
 }
 
-/* Hover effect (opsiyonel) */
+/* Hover effect */
 .card-sprite:hover.card-sprite--inactive {
   opacity: 0.5;
   cursor: pointer;
 }
 
-/* Container için ek styles */
 .card-type-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 12px 20px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(4px);
-}
-
-.card-type-indicator--single {
-  padding: 8px;
-  gap: 0;
 }
