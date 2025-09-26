@@ -4,7 +4,6 @@ import { AccountInfo, ErrorMessage } from '../../atoms'
 interface MainMenuScreenLayoutProps {
   children?: React.ReactNode
   welcomeMessage: string
-  cardTypeMessage: string
   error?: string | null
   errorTestId?: string
   screenTestId?: string
@@ -13,7 +12,6 @@ interface MainMenuScreenLayoutProps {
 const MainMenuScreenLayout = ({ 
   children,
   welcomeMessage,
-  cardTypeMessage,
   error,
   errorTestId = "screen-error-message",
   screenTestId = "atm-screen-main-menu"
@@ -25,7 +23,6 @@ const MainMenuScreenLayout = ({
       {/* Welcome area - positioned at top */}
       <div className="pt-8 pb-4">
         <h2 className="text-2xl mb-3">{welcomeMessage}</h2>
-        <p className="text-lg">{cardTypeMessage}</p>
       </div>
       
       {/* Content area for menu items */}

@@ -31,7 +31,6 @@ const ATMLayout = () => {
             <CardTypeIndicator 
               activeCardType={user.cardType}
               showAll={true}
-              className="scale-75"
               data-testid="atm-card-type-indicator"
             />
           )}

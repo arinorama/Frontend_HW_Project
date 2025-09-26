@@ -12,7 +12,6 @@ const MainMenuScreen = ({ user }: MainMenuScreenProps) => {
   return (
     <MainMenuScreenLayout
       welcomeMessage={t('ui.welcome', { name: user.name })}
-      cardTypeMessage={`${t('ui.cardType')} ${user.cardType.toUpperCase()}`}
       screenTestId="atm-screen-main-menu"
     />
   )
