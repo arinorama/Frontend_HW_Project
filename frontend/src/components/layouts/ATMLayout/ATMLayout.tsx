@@ -25,17 +25,17 @@ const ATMLayout = () => {
       
       {/* ATM Machine Frame */}
       <div className="atm-machine-frame" data-testid="atm-machine-frame">
-        {/* Card Type Indicator - Sadece user login olduğunda görünür */}
-        {user && (
-          <div className="mb-4 flex justify-center">
+        {/* Card Type Indicator Area - Her zaman aynı yükseklikte */}
+        <div className="mb-4 flex justify-center h-12"> {/* Sabit yükseklik */}
+          {user && (
             <CardTypeIndicator 
               activeCardType={user.cardType}
               showAll={true}
               className="scale-75"
               data-testid="atm-card-type-indicator"
             />
-          </div>
-        )}
+          )}
+        </div>
         
         {/* ATM Main Grid Layout */}
         <div className="atm-grid" data-testid="atm-layout-grid">
