@@ -1,6 +1,6 @@
 import React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { clsx } from 'clsx'
+import { cn } from '../../../lib/utils'
 
 const buttonVariants = cva(
   // Base classes
@@ -59,7 +59,7 @@ const Button = ({
   if (variant === 'screen') {
     return (
       <span
-        className={clsx(
+        className={cn(
           buttonVariants({ variant, size }), 
           disabled && 'opacity-50 cursor-not-allowed',
           className
@@ -75,7 +75,7 @@ const Button = ({
   // For sidebar and action variants, use button
   return (
     <button
-      className={clsx(buttonVariants({ variant, size }), className)}
+      className={cn(buttonVariants({ variant, size }), className)}
       onClick={onClick}
       disabled={disabled}
       data-testid={testId}

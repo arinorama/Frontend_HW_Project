@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { clsx } from 'clsx'
 import { useAppSelector } from '../../../hooks/redux'
 import { selectPinClearTrigger } from '../../../features/uiSlice'
-import { handleATMKeyDown } from '../../../lib/utils'
+import { handleATMKeyDown, cn } from '../../../lib/utils'
 
 const pinInputVariants = cva(
   // Base classes
@@ -105,7 +104,7 @@ const PinInput = ({
       placeholder={placeholder}
       disabled={disabled}
       autoFocus={autoFocus}
-      className={clsx(pinInputVariants({ variant, size }), className)}
+      className={cn(pinInputVariants({ variant, size }), className)}
       data-testid={testId}
       autoComplete="off"
     />

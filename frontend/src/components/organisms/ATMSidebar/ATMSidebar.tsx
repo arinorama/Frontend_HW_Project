@@ -1,6 +1,6 @@
+import { cn } from '../../../lib/utils'
 import type { ScreenType } from '../../../types'
 import { ATMButton } from '../../molecules'
-import { cn } from '../../../lib/utils'
 
 type ATMSidebarProps = {
   side: 'left' | 'right'
