@@ -2,13 +2,17 @@ import { useState } from 'react'
 import type { ScreenType } from '../../../types'
 import { getScreenConfigs } from '../../../types'
 import { useTranslation } from '../../../hooks/useTranslation'
+import { useAppSelector } from '../../../hooks/redux'
+import { selectUser } from '../../../features/authSlice'
 import ATMSidebar from '../../organisms/ATMSidebar/ATMSidebar'
 import ATMScreen from '../../organisms/ATMScreen/ATMScreen'
 import ATMBrandHeader from '../../organisms/ATMBrandHeader/ATMBrandHeader'
+import { CardTypeIndicator } from '../../atoms'
 
 const ATMLayout = () => {
   const [currentScreen, setCurrentScreen] = useState<ScreenType>('welcome')
   const { t } = useTranslation()
+  const user = useAppSelector(selectUser)
   
   const currentConfig = getScreenConfigs(t)[currentScreen]
 
@@ -21,6 +25,18 @@ const ATMLayout = () => {
       
       {/* ATM Machine Frame */}
       <div className="atm-machine-frame" data-testid="atm-machine-frame">
+        {/* Card Type Indicator - Sadece user login olduğunda görünür */}
+        {user && (
+          <div className="mb-4 flex justify-center">
+            <CardTypeIndicator 
+              activeCardType={user.cardType}
+              showAll={true}
+              className="scale-75"
+              data-testid="atm-card-type-indicator"
+            />
+          </div>
+        )}
+        
         {/* ATM Main Grid Layout */}
         <div className="atm-grid" data-testid="atm-layout-grid">
           

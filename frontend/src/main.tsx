@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { store } from './store'
 import './i18n' // Initialize i18n
 import './index.css'
+import './styles/card-sprite.css'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(

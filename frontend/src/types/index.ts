@@ -7,12 +7,15 @@ export type ScreenType =
   | 'withdraw' 
   | 'deposit';
 
+// Card Types (for CardTypeIndicator component)
+export type CardType = 'star' | 'pulsa' | 'maestro' | 'mastercard' | 'plus' | 'visa';
+
 // User Types
 export type User = {
   id: string;
   name: string;
   pin: string;
-  cardType: 'VISA' | 'MASTERCARD' | 'AMEX';
+  cardType: CardType; // Updated to use new CardType
   balance: number;
 }
 

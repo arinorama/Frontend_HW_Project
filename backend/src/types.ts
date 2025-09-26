@@ -3,7 +3,7 @@ export interface User {
   id: string;
   pin: string;
   name: string;
-  cardType: 'visa' | 'mastercard' | 'amex';
+  cardType: 'star' | 'pulsa' | 'maestro' | 'mastercard' | 'plus' | 'visa';
   balance: number;
 }
 

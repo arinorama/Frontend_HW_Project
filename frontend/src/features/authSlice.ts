@@ -1,12 +1,13 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit'
 import { atmApi } from '../services/atmApi'
 import { clearPin as clearPinUI } from './uiSlice'
+import type { CardType } from '../types'
 
 // Types
 export type User = {
   id: string
   name: string
-  cardType: 'visa' | 'mastercard' | 'amex'
+  cardType: CardType
   balance: number
 }
 

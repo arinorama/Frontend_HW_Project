@@ -3,6 +3,7 @@ import {
   clearPin, 
   clearUIState 
 } from '../features/uiSlice'
+import { logout } from '../features/authSlice'
 
 // State Machine Pattern Types
 export type ActionTrigger = 
@@ -81,7 +82,11 @@ export class NavigationService {
     { 
       from: 'main-menu', 
       to: 'welcome', 
-      trigger: 'EXIT' 
+      trigger: 'EXIT',
+      action: (ctx) => {
+        ctx.dispatch(logout())
+        ctx.dispatch(clearUIState())
+      }
     },
     { 
       from: 'main-menu', 

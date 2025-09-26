@@ -44,7 +44,7 @@ export type AuthResponse = {
   user?: {
     id: string
     name: string
-    cardType: 'visa' | 'mastercard' | 'amex'
+    cardType: 'star' | 'pulsa' | 'maestro' | 'mastercard' | 'plus' | 'visa'
     balance: number
   }
   message: string

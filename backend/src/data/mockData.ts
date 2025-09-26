@@ -20,7 +20,7 @@ export const mockUsers: User[] = [
     id: '3',
     pin: '9999',
     name: 'Mike Johnson', 
-    cardType: 'amex',
+    cardType: 'maestro',
     balance: 750.25
   }
 ];
