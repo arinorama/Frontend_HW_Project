@@ -254,5 +254,4 @@ Check `backend/src/data/mockData.ts` for available test accounts with different 
 
 ## Short Falls
 
-Need to implement selected card type sprite highlighting
 Need to implement grafiti sprites
